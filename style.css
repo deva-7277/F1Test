@@ -1,118 +1,44 @@
-* {
-    box-sizing: border-box;
- }
-
-body, html {
+.main-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px;
     margin: 0 auto;
-    padding: 0;
- }
-
- .container{
-    padding-right: 0%;
-    padding-left: 0%;
-    margin-right: auto;
-    margin-left: auto;
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 10px;
+  }
+  .section1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .section4 {
+    grid-column: 5/7;
+  }
+  .section7 {
+    grid-column: 5/7;
+  }
+  .section8 {
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+  .section9 {
+    grid-column: 3/7;
+    grid-row: 3/5;
+  }
+  .grid-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
     height: 100%;
+  }
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  @media screen and (min-width: 305px) and (max-width: 993px) {
+    #section-3 .cards {
+      flex-direction: column;
     }
-
-.carousel-item img{
-    height: 100vh;
-}
-
-.carousel-indicators [data-bs-target]{
-    background-color: transparent!important;
-}
-
-.image-wrapper{
-    display: flex;
-}
-
-.image-wrapper img{
-    height: 30vh;
-}
-
-.card{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.col-8 img.img-fluid{
-    max-width: 100%;
-    height: 100%;
-}
-
-.btn:hover{
-    color: #0b5ed7!important;
-    border: 1px solid #0b5ed7;
-    background-color: #fff!important;
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .image-wrapper .container{
-        width: 50%;
-    }
-    .carousel-item img{
-        height: 50vh;
-    }
-    .img-fluid{
-        height: 100%;
-    }
-    .col img{
-        width: 100%;
-        height: 100%;
-    }
-    
-}
-
-@media screen and (min-width: 200px) and (max-width: 576px) {
-    .image-wrapper .container{
-        display: grid;
-        width: 50%;
-    }
-    .navbar{
-        width: 100%;
-    }
-    .carousel-item img{
-        height: 25%;
-    }
-
-    .carousel-caption{
-        font-size: 0.5em;
-        margin-bottom: 0px;
-    }
-
-    .container img{
-        height: 20vh;
-    }
-    .img-fluid{
-        height: 100%;
-    }
-    .col img, .col-4 img{
-        width: 100%;
-        height: 100%;
-    }
-    .row{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    
-}
-@media screen and (max-width: 320px) {
-    .container{
-        width: 100%;
-    }
-    .image-wrapper .container{
-        width: 100%;
-    }
-    .navbar{
-        width: 100%;
-    }
-    .img-fluid{
-        height: 100%;
-    }
-    .col img, .col-4 img{
-        width: 100%;
-        height: 100%;
-    }
-    
-}
+  }
